@@ -1,0 +1,31 @@
+{
+  "name": "paper-random-term-card",
+  "authors": [
+    "collaborne"
+  ],
+  "description": "A Material Design card that displays a random term from the given array (Polymer 1.x)",
+  "main": "paper-random-term-card.html",
+  "keywords": [
+    "web-components",
+    "polymer",
+	"material",
+	"random",
+	"card",
+	"paper"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/collaborne/paper-random-term-card",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "paper-card": "PolymerElements/paper-card#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0",
+    "web-component-tester": "*",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}

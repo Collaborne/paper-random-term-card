@@ -1,0 +1,21 @@
+language: node_js
+sudo: false
+node_js:
+- stable
+addons:
+  firefox: '42.0'
+cache:
+  directories:
+  - node_modules
+before_script:
+- npm install web-component-tester bower polylint
+- bower install
+- bower install -s https://${GH_TOKEN}@github.com/Collaborne/collaborne-build-tools.git
+- polylint
+- export PATH=$PWD/node_modules/.bin:$PATH
+script:
+- xvfb-run wct
+after_success:
+  ! '[ ${TRAVIS_PULL_REQUEST} = "false" ] && [ ${TRAVIS_BRANCH} = "master"] && bower_components/collaborne-build-tools/gpages_build.sh Collaborne info@collaborne.com'
+env:
+  secure: ssCP7Ljz37mqW7oSJkACerZEdfrC3RusmxbwXzeyGyFndqdqavT9tE8tW1/q1umEwAbwO+BtKS4OeSfvVaJ+PUHhr0izjGmvZQp7unlUwdlXWkmUg8BA+XSPbEY1swCKblmAAs0egmVGrVoAwwBurV1QGSrVbNWni4c2IvU2rTkyKgSptL75y+3LrJRZPIbkcSgMpEjwkxN01xcxRyVbekLMWE3ujhDJvMtlHwDkmIdLS8fnFxcAbKAqwyZN/XFE3XnhqjP+q2F7ZWssyaXNmSfytgDCLuwZkQUu7HRUfa4Kq4uqbarS5xEiTp2CtTgve+CvXQnHxbKynvxZnFqvsmdjU+1OdsghzCrRV8cVvZOySOmG2V0DLowE3G419HUprLRrMxJAtwSxCKVVdnYk/5hvmHdhBtIoD6hQX2O7abm8954rGZe8c+lJlM94KcaolR+gsTnMpWoTvm+/spsn3xPOcQ2lK7VlU1dpzsXrAIJ95vUZ5g+0oodaBYmumEHZSc3g2r0Qq7lKo/qgHidGVxAyOZi2az7D0TyhA4mV6DXkPcNvYHE8QYuvLU4uRxu50h/bHs1wcie/k6QeekInWvN8CfX0eGPiRTeu+PeH1jw4uisOo5X+qeGOXTvHm9IerABLztVyIS14qqddkkWlxhw7KmZevJDT4TVV2fRMlf8=

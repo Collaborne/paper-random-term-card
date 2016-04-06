@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="../../paper-button/paper-button.html">
+		<link rel="import" href="../paper-random-term-card.html">
+		<title>Demo</title>
+
+		<style is="custom-style">
+			#random {
+				--paper-random-term-card: {
+					width: 300px;
+					text-align: center;
+				};
+			}
+		</style>
+	</head>
+
+	<body>
+		<template is="dom-bind">
+			<paper-random-term-card id="random" selected="----" values="[[values]]"></paper-random-term-card>
+			<paper-button raised on-tap="next">Next</paper-button>
+		</template>
+
+		<script>
+			var scope = document.querySelector('template[is=dom-bind]');
+			scope.next = function() {
+				this.$.random.next();
+			};
+			scope.values = [
+				"Value 1",
+				"Value 2",
+				"Value 3",
+				"Value 4"
+			];
+		</script>
+	</body>
+</html>
