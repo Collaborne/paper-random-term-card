@@ -3,7 +3,7 @@ _[Demo and API Docs](http://collaborne.github.io/paper-random-term-card)_
 paper-random-term-card [![Build Status](https://travis-ci.org/Collaborne/paper-random-term-card.svg?branch=master)](https://travis-ci.org/Collaborne/paper-random-term-card)
 =========
 
-A Material Design card that displays a random term from the given array (Polymer 1.x)
+A Material Design card that displays a random term from the given array (Polymer)
 
 ## Install
 

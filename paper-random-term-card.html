@@ -26,7 +26,7 @@ Custom property | Description | Default
 	<template>
 		<style>
 			paper-card {
-				@apply(--paper-random-term-card);
+				@apply --paper-random-term-card;
 			}
 		</style>
 		<paper-card>
@@ -67,9 +67,10 @@ Custom property | Description | Default
 				this.selected = this.values[0];
 				return;
 			}
+			
 			// Select a new random value which is not the current value
-			var currentIndex = this.values.indexOf(this.selected);
-			var nextIndex = undefined;
+			const currentIndex = this.values.indexOf(this.selected);
+			let nextIndex = undefined;
 			do {
 				nextIndex = Math.floor(Math.random() * this.values.length);
 			} while (nextIndex === currentIndex);

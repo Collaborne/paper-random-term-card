@@ -17,22 +17,25 @@
 	</head>
 
 	<body>
-		<template is="dom-bind">
-			<paper-random-term-card id="random" selected="----" values="[[values]]"></paper-random-term-card>
-			<paper-button raised on-tap="next">Next</paper-button>
-		</template>
+		<dom-bind>
+			<template>
+				<paper-random-term-card id="random" selected="----" values="[[values]]"></paper-random-term-card><br>
+				<br>
+				<paper-button raised on-tap="next">Next</paper-button>
 
-		<script>
-			var scope = document.querySelector('template[is=dom-bind]');
-			scope.next = function() {
-				this.$.random.next();
-			};
-			scope.values = [
-				"Value 1",
-				"Value 2",
-				"Value 3",
-				"Value 4"
-			];
-		</script>
+				<script>
+					var scope = document.querySelector('dom-bind');
+					scope.next = function() {
+						this.$.random.next();
+					};
+					scope.values = [
+						"Value 1",
+						"Value 2",
+						"Value 3",
+						"Value 4"
+					];
+				</script>
+			</template>
+		</dom-bind>
 	</body>
 </html>
