@@ -1,6 +1,4 @@
-_[Demo and API Docs](http://collaborne.github.io/paper-random-term-card)_
-
-paper-random-term-card [![Build Status](https://travis-ci.org/Collaborne/paper-random-term-card.svg?branch=master)](https://travis-ci.org/Collaborne/paper-random-term-card)
+paper-random-term-card [![Build Status](https://travis-ci.org/Collaborne/paper-random-term-card.svg?branch=master)](https://travis-ci.org/Collaborne/paper-random-term-card) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/Collaborne/paper-random-term-card)
 =========
 
 A Material Design card that displays a random term from the given array (Polymer)
@@ -8,6 +6,33 @@ A Material Design card that displays a random term from the given array (Polymer
 ## Install
 
 `bower install paper-random-term-card`
+
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="my-element.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<paper-random-term-card
+    id="random"
+    selected="----"
+    values="[[values]]">
+</paper-random-term-card>
+
+<script>
+    values = [
+        "Value 1",
+        "Value 2",
+        "Value 3",
+        "Value 4"
+    ];
+</script>
+```
 
 ## License
 
