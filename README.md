@@ -1,4 +1,7 @@
 paper-random-term-card [![Build Status](https://travis-ci.org/Collaborne/paper-random-term-card.svg?branch=master)](https://travis-ci.org/Collaborne/paper-random-term-card) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/Collaborne/paper-random-term-card)
+
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/Collabornepaper-random-term-card)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/Collabornepaper-random-term-card.svg)](https://vaadin.com/directory/component/Collabornepaper-random-term-card)
 =========
 
 A Material Design card that displays a random term from the given array (Polymer)
